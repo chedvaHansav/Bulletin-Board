@@ -1,0 +1,147 @@
+/* עיצוב הכללי של הדף */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* מיכל העטיפה של כל המודעות */
+  .ads-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* עיצוב של כל מודעה (כרטיס) */
+  .ad-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 260px;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    border-left: 5px solid #ff6347;  /* גבול צבעוני בצד שמאל */
+  }
+  
+  .ad-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* כותרת המודעה */
+  .ad-card h3 {
+    font-size: 20px;
+    margin: 0 0 10px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* תיאור המודעה */
+  .ad-card p {
+    font-size: 14px;
+    color: #666;
+    margin: 0 0 15px;
+  }
+  
+  /* כפתור למחיקת מודעה */
+  .ad-card button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+  .ad-card button:hover {
+    background-color: #e55347;
+  }
+  
+  /* עיצוב של שדה החיפוש */
+  .search-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .search-container input {
+    padding: 12px 20px;
+    font-size: 18px;
+    width: 60%;
+    max-width: 600px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  .search-container input:focus {
+    border-color: #ff6347;  /* שינוי צבע הגבול כאשר השדה בפוקוס */
+  }
+  
+  /* כפתור להוספת מודעה חדשה */
+  .add-ad-button {
+    display: block;
+    margin: 20px auto;
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .add-ad-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* טופס הוספת מודעה */
+  .add-ad-form {
+    display: none; /* ברירת מחדל - לא מוצג */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  /* מצב מוצג (display: block) אם הוספנו את זה ב-TypeScript */
+  .add-ad-form.show {
+    display: block;
+  }  
+  
+  .add-ad-form input,
+  .add-ad-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .add-ad-form button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .add-ad-form button:hover {
+    background-color: #45a049;
+  }
+  

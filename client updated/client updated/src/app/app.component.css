@@ -1,0 +1,47 @@
+/* עיצוב כללי עבור המיכל של הכותרת */
+h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #ff6347;  /* צבע רקע יפה לכותרת */
+    color: white;  /* צבע טקסט בהיר */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase; /* הפיכת הטקסט לאותיות גדולות */
+    letter-spacing: 2px;  /* רווח בין האותיות */
+  }
+  
+  /* עיצוב נוסף למיכל החיצוני של הכותרת */
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f4f4f4; /* צבע רקע בהיר למיכל */
+    min-height: 100vh; /* לגובה מלא של הדף */
+  }
+  
+  /* עיצוב של כפתורים בתוך nav אם תבחר להוסיף בעתיד */
+  nav {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  nav a {
+    font-size: 18px;
+    color: #ff6347;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  nav a:hover {
+    color: #e55347;
+    text-decoration: underline;
+  }
+  

@@ -1,0 +1,73 @@
+<!-- src/app/components/ads-list/ads-list.component.html -->
+ 
+<!-- <div>
+    <input 
+      type="text" 
+      placeholder="Search ads..." 
+      [(ngModel)]="searchTerm" 
+      (input)="filterAds()" 
+      class="search-box"
+    />
+  </div>
+  
+
+<div *ngFor="let ad of filteredAds">
+    <div>
+      <h2>{{ ad.title }}</h2>
+      <p>{{ ad.description }}</p>
+      <button (click)="deleteAd(ad.id)">מחוק</button>
+    </div>
+  </div> -->
+
+  <div class="search-container">
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      (input)="filterAds()"
+      placeholder="חפש מודעה..."
+    />
+  </div>
+  
+  <!-- כפתור הוספת מודעה -->
+  <button class="add-ad-button" (click)="toggleAddAdForm()">הוספת מודעה חדשה</button>
+  <!-- טופס הוספת מודעה חדשה -->
+<!-- טופס הוספת מודעה חדשה -->
+<div [class.show]="showAddAdForm" class="add-ad-form">
+    <h3>הוסף מודעה חדשה</h3>
+    <form (ngSubmit)="addAd()">
+      <input [(ngModel)]="newAd.title" name="title" placeholder="כותרת" required />
+      <textarea [(ngModel)]="newAd.description" name="description" placeholder="תיאור" required></textarea>
+      <input [(ngModel)]="newAd.location" name="location" placeholder="מיקום" required />
+      <input [(ngModel)]="newAd.creator" name="creator" placeholder="יוצר" required />
+      <button type="submit">הוסף מודעה</button>
+      <button type="button" (click)="toggleAddAdForm()">ביטול</button> <!-- כפתור ביטול -->
+    </form>
+  </div>
+  
+  
+
+
+  <!-- טופס הוספת מודעה (הוסתר עד שלוחצים על הכפתור) -->
+  <!-- <div *ngIf="showAddAdForm" class="add-ad-form">
+    <input type="text" placeholder="כותרת" />
+    <textarea placeholder="תיאור"></textarea>
+    <button>שמור</button>
+  </div> -->
+  
+
+  <!-- הצגת המודעות -->
+<div class="ads-container">
+    <div *ngFor="let ad of filteredAds" class="ad-card">
+      <h3>{{ ad.title }}</h3>
+      <p>{{ ad.description }}</p>
+      <p><strong>מיקום:</strong> {{ ad.location }}</p>
+      <p><strong>יוצר:</strong> {{ ad.creator }}</p>
+  
+      <!-- כפתור למחיקת מודעה -->
+      <button (click)="deleteAd(ad.id)">מחק</button>
+    </div>
+  </div>
+  
+  
+  
+  

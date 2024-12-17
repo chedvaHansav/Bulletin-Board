@@ -1,0 +1,22 @@
+<!-- src/app/components/ad-form/ad-form.component.html -->
+ 
+<form (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <input matInput [(ngModel)]="ad.title" name="title" placeholder="כותרת" required>
+    </mat-form-field>
+   
+    <mat-form-field>
+      <textarea matInput [(ngModel)]="ad.description" name="description" placeholder="תיאור" required></textarea>
+    </mat-form-field>
+   
+    <mat-form-field>
+      <input matInput [(ngModel)]="ad.location" name="location" placeholder="מיקום" required>
+    </mat-form-field>
+   
+    <mat-form-field>
+      <input matInput [(ngModel)]="ad.creator" name="creator" placeholder="שם היוצר" required>
+    </mat-form-field>
+   
+    <button mat-button type="submit">שלח</button>
+  </form>
+  
